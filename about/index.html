@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
+
+    <title>vishalsingha | About</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@200;400&display=swap');
+
+        .abt_card {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0px 0px 10px 0px;
+            height: 100%;
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .first_div {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 2px;
+            margin: 2px;
+            height: 100%;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .second_div {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 2px;
+            margin: 2px;
+            height: 100%;
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avtar_img {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            margin: 10px;
+
+        }
+
+        .about_heading {
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            margin: 10px;
+            text-align: center;
+            padding: 1.5rem;
+
+        }
+
+        .information_sec {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 2px;
+            margin: 2px;
+            height: 100%;
+            width: 100%;
+
+
+        }
+
+        .info_para {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
+            margin: 10px;
+            text-align: justify;
+            font-family: 'Open Sans', sans-serif;
+
+
+        }
+
+        .btn_header {
+            border-radius: 15px;
+            height: auto;
+            width: auto;
+            background-color: rgb(7, 133, 34);
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            margin: 10px;
+            padding: 5px;
+            box-shadow: 0px 0px 10px 0px;
+
+
+        }
+
+        .intern_info {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 2px;
+        }
+
+        .intern_dis {
+            margin: 5px auto;
+            padding: auto 50px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .intern_pts {
+            list-style: symbols(star) !important;
+            padding-left: 40px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            list-style-image: url("https://img.icons8.com/emoji/20/000000/star-emoji.png");
+            text-align: justify;
+            padding-right: 10px;
+            /* font-family: 'Oswald', sans-serif; */
+        }
+
+        .intern_date{
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            text-align: justify;
+            padding-left: 30px;
+            /* font-family: 'Oswald', sans-serif; */
+        }
+
+        .degree_pts{
+            list-style: symbols(star) !important;
+            padding-left: 40px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            list-style-image: url("https://img.icons8.com/external-flaticons-lineal-color-flat-icons/20/000000/external-degree-alternative-medicine-flaticons-lineal-color-flat-icons.png");
+            text-align: justify;
+            padding-right: 10px;
+        }
+
+        .icons_tools{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        .tool_ico{
+            padding: 2px;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .abt_card {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .first_div {
+                width: 100%;
+            }
+
+            .second_div {
+                width: 100%;
+            }
+
+            .btn_header {
+                width: 90%;
+            }
+
+            .abt_card {
+                width: 96%;
+            }
+            .icons_tools{
+                width: 100%;
+                display: block;
+            }
+            .tool_ico{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="/" class="nav-logo">Developer</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/project" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/vishalsingha" class="nav-link">Github</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="adjust"></div>
+
+
+    <!-- cards -->
+
+
+    <div class="span_about">
+        <div class="abt_card">
+            <div class="first_div">
+                <img class="avtar_img" src="static/img.jpeg" alt="Avatar" width="100%">
+            </div>
+            <div class="second_div">
+                <h2 class="about_heading">Experience</h2>
+                <div class="information_sec">
+
+
+                    <div class="intern_info">
+                        <p class="info_para">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eum labore dolores, dicta
+                            asperiores corrupti ex ea maxime, voluptatum dolorem fugit obcaecati magni vero quos illum
+                            tempore, soluta autem veritatis?
+                        </p>
+                        <div class="intern_dis">
+                            <h2>Tools used: </h2>
+                            <div class="icons_tools">
+                                <span class="iconify" data-icon="logos:python" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="logos:django-icon" style="color: #b0070f;" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="logos:docker-icon" style="color: #b0070f;" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="logos:flask" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="file-icons:c" style="color: #b0070f;" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="logos:mysql" style="color: #b0070f;" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="logos:tensorflow" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="simple-icons:keras" style="color: #b0070f;" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="logos:pytorch" style="color: #b0070f;" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="logos:aws" style="color: #b0070f;" data-width="47" data-height="47"></span>
+                                <span class="iconify" data-icon="logos:heroku" style="color: #b0070f;" data-width="47" data-height="47"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="span_about">
+        <div class="abt_card">
+            <div class="first_div">
+                <img class="avtar_img" src="static/work.jpg" alt="Avatar" width="100%">
+            </div>
+            <div class="second_div">
+                <h2 class="about_heading">Experience</h2>
+                <div class="information_sec">
+                    <div class="intern_info">
+                        <button class="btn_header">Computer Vision intern @ Upjao Llp</button>
+                        <pre  class="intern_date">From : 4 Nov. '21 - 4 Jan '22</pre>
+                        <div class="intern_dis">
+                            <ul class="intern_pts">
+                                <li>Image segmentation using Classical deep learning methods of grains like soyabean, 
+                                    corn and rice using <b>concave point detection and verification</b>, arc mapping and watershed techiniques and 
+                                    acheiving <b>90+% accuracy for rice and 98+% for corn and soya.</b> </li>
+                                <li>Classification of corn using kernal images into broken, no-defect, mold  classes of 
+                                    soyabeans by using classical texture <b>(GLCM, Gabore and Local Binary Pattern)</b>, 
+                                    shape, color channels and edges sum based feature for Classification and achineved 
+                                    <b>99+% of accuracy.</b>  </li>
+                                <li>Trained Simase and triplet loss based deep learning models for face recognition of buffalos. Also tried 
+                                    shift invariant deep learning models for face recognition of buffalos. </li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="intern_info">
+                        <button class="btn_header">Computer Vision intern @ Incipient Technologies Pvt. Ltd.</button>
+                        <pre  class="intern_date">From : 4 Nov. '21 - 4 Jan '22</pre>
+                        <div class="intern_dis">
+                            <ul class="intern_pts">
+                                <li>Worked with computer vision engineers on object detection, tracking.</li>
+                                <li> Object detection, tracking and Automatic speed calculator system.</li>
+                                <li> Trained YOLO-v3 object detector on custom dataset for vehicle detection.</li>
+                                <li>Design and development of object detection and tracking system for multiple camera steams.</li>
+                                <li>Development, deployment of Django webapp for real-time demo and packaging to .exe file.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="span_about">
+        <div class="abt_card">
+            <div class="first_div">
+                <img class="avtar_img" src="static/courses.jpg" alt="Avatar" width="100%">
+            </div>
+            <div class="second_div">
+                <h2 class="about_heading">Courses and Training</h2>
+                <div class="information_sec">
+                    <div class="intern_info">
+                        <div class="intern_dis">
+                            <ul class="degree_pts">
+                                <a herf="https://www.coursera.org/account/accomplishments/certificate/QVYTSQ5K9ATK">
+                                    <li> Neural Networks and Deep Learning</li>
+                                </a>
+                                <a herf="https://www.coursera.org/account/accomplishments/certificate/7NMAZCTNLBCF">
+                                    <li> Convolutional Neural Networks</li>
+                                </a>
+                                <a herf="https://www.coursera.org/account/accomplishments/certificate/NHCXZP2ZF6MV">
+                                    <li> Sequence models</li>
+                                </a>
+                                <a herf="https://www.coursera.org/account/accomplishments/certificate/6TPD8HW9NB2H">
+                                    <li> Structuring Machine Learning Projects</li>
+                                </a>
+                                <a herf="https://www.coursera.org/account/accomplishments/certificate/FG7DQNSS6J2W">
+                                    <li> Improving Deep Neural Networks: Hyperparameter
+                                        Tuning, Regularization and Optimization</li>
+                                </a>
+                                <a herf="https://appliedaicourses.com">
+                                    <li> Applied Ai courses</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="span_about">
+        <div class="abt_card">
+            <div class="first_div">
+                <img src="https://img.icons8.com/external-filled-outline-icons-maxicons/150/000000/external-award-startup-business-filled-outline-filled-outline-icons-maxicons.png"/>
+            </div>
+            <div class="second_div">
+                <h2 class="about_heading">Prizes and Awards</h2>
+                <div class="information_sec">
+                    <div class="intern_info">
+                        <div class="intern_dis">
+                            <ul class="degree_pts">
+                                <a herf="https://www.coursera.org/account/accomplishments/certificate/QVYTSQ5K9ATK">
+                                    <li> Recognizance Series of Competition (IIT BHU) </li>
+                                </a>
+                                <a herf="https://www.coursera.org/account/accomplishments/certificate/7NMAZCTNLBCF">
+                                    <li> Tabular Playground Series - Feb 2021</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer starts here -->
+    <div class="social-container">
+        <ul class="social-icons">
+            <li><a href="https://www.linkedin.com/in/vishal-singh-398a4219b/"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/vishalsingha"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.instagram.com/vishal09vns/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.instagram.com/vishal09vns/"><i class="fa fa-medium"></i></a></li>
+
+        </ul>
+    </div>
+    <!-- footer ends here -->
+
+</body>
+
+
+<script src="/static/main.js"></script>
+
+</html>
