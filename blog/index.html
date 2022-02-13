@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link rel="stylesheet" herf="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+
+
+    <title>vishalsingha</title>
+
+
+    <style>
+  
+        /*PEN STYLES*/
+        * {
+            box-sizing: border-box;
+       }
+        body {
+            background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+       }
+
+       .my_cnt{
+              width: 100%;
+              height: 100%;
+              margin: 10rem auto;
+              background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+       }
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem auto;
+            box-shadow: 0 3px 7px -1px rgba(0, 0, 0, .1);
+            margin-bottom: 1.6%;
+            line-height: 2;
+            background: #fff;
+            font-family: sans-serif;
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 0;
+
+            
+       }
+        .blog-card a {
+            color: inherit;
+       }
+        .blog-card a:hover {
+            color: #5ad67d;
+       }
+        .blog-card:hover .photo {
+            transform: scale(1.3) rotate(3deg);
+       }
+        .blog-card .meta {
+            position: relative;
+            z-index: 0;
+            height: 250px;
+       }
+        .blog-card .photo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.2s;
+       }
+        .blog-card .details, .blog-card .details ul {
+            margin: auto;
+            padding: 0;
+            list-style: none;
+       }
+        .blog-card .details {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            margin: auto;
+            transition: left 0.2s;
+            background: rgba(0, 0, 0, .6);
+            color: #fff;
+            padding: 10px;
+            width: 100%;
+            font-size: 1.5rem;
+       }
+        .blog-card .details a {
+            text-decoration: dotted underline;
+       }
+        .blog-card .details ul li {
+            display: inline-block;
+       }
+        .blog-card .details .author:before {
+            font-family: FontAwesome;
+            margin-right: 10px;
+            content: "\f007";
+       }
+        .blog-card .details .date:before {
+            font-family: FontAwesome;
+            margin-right: 10px;
+            content: "\f133";
+       }
+        .blog-card .details .tags ul:before {
+            font-family: FontAwesome;
+            content: "\f02b";
+            margin-right: 10px;
+       }
+        .blog-card .details .tags li {
+            margin-right: 2px;
+       }
+        .blog-card .details .tags li:first-child {
+            margin-left: -4px;
+       }
+        .blog-card .description {
+            padding: 1rem;
+            background: #fff;
+            position: relative;
+            z-index: 1;
+       }
+        .blog-card .description h1, .blog-card .description h2 {
+            font-family: Poppins, sans-serif;
+       }
+        .blog-card .description h1 {
+            line-height: 1;
+            margin: 0;
+            font-size: 1.7rem;
+       }
+        .blog-card .description h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: rgba(40, 217, 4, 1);
+            margin-top: 5px;
+       }
+        .blog-card .description .read-more {
+            text-align: right;
+       }
+        .blog-card .description .read-more a {
+            color: #5ad67d;
+            display: inline-block;
+            position: relative;
+       }
+        .blog-card .description .read-more a:after {
+            font-family: FontAwesome;
+            margin-left: -10px;
+            opacity: 0;
+            vertical-align: middle;
+            transition: margin 0.3s, opacity 0.3s;
+       }
+        .blog-card .description .read-more a:hover:after {
+            opacity: 1;
+       }
+        .blog-card p {
+            position: relative;
+            margin: 1rem 0 0;
+       }
+        .blog-card p:first-of-type {
+            margin-top: 1.25rem;
+       }
+        .blog-card p:first-of-type:before {
+            content: "";
+            position: absolute;
+            height: 5px;
+            background: #5ad67d;
+            width: 35px;
+            top: -0.75rem;
+            border-radius: 3px;
+       }
+        .blog-card:hover .details {
+            left: 0%;
+       }
+        @media (min-width: 640px) {
+            .blog-card {
+                flex-direction: row;
+                max-width: 700px;
+           }
+            .blog-card .meta {
+                flex-basis: 40%;
+                height: auto;
+           }
+            .blog-card .description {
+                flex-basis: 60%;
+           }
+            .blog-card .description:before {
+                transform: skewX(-3deg);
+                content: "";
+                background: #fff;
+                width: 30px;
+                position: absolute;
+                left: -10px;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
+           }
+            .blog-card.alt {
+                flex-direction: row-reverse;
+           }
+            .blog-card.alt .description:before {
+                left: inherit;
+                right: -10px;
+                transform: skew(3deg);
+           }
+            .blog-card.alt .details {
+                padding-left: 25px;
+           }
+       }
+
+       @media (max-width: 640px){
+           .blog-card{
+               width: 90%;
+               margin : 30px auto;
+           }
+       }
+
+       .container_body{
+           width: 100%;
+           
+       }
+
+       .blog_text{
+           font-size: 1.5rem;
+           text-align: justify;
+       }
+        
+
+    </style>
+</head>
+
+<body>
+    <!-- nav bar -->
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/" class="nav-logo">Developer</a>
+            <ul class="nav-menu">
+                        <li class="nav-item">
+          <a href="/" class="nav-link">Home</a>
+        
+                <li class="nav-item">
+                    <a href="/project" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/vishalsingha" class="nav-link">Github</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+   
+
+    <div class="my_cnt">
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo"
+                    style="background-image: url('/static/codon.png')">
+                </div>
+                <ul class="details">
+                    <li class="author"><a href="#">Vishal Singh</a></li>
+                    <li class="date">Dec 15, 2021</li>
+                    <li class="tags">
+                        <ul>
+                            <li><a href="#">Data Science</a></li>
+                            <li><a href="#">Feature enginering</a></li>
+                            <li><a href="#">Data imbalance</a></li>
+                            <li><a href="#">Docker</a></li>
+                            <li><a href="#">Flask</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="description">
+                <h1>Kingdom and DNAtype prediction using Codon Bias</h1>
+                <h2>Data Science | Flask | Docker</h2>
+                <p class="blog_text"> This is a end to end project involving the classfication of DAtype and Kingdom using animal codon usage bias lavel. This involve extensive data cleaning, EDA and feature enginering and experimentation  to handle imbalance classes along with improving accuracy. I have also deployed the project using Flas with the help of docker .</p>
+                <p class="read-more">
+                    <a class="blog_text"  href="https://medium.com/@vishal09vns/kingdom-and-dnatype-prediction-using-codon-bias-f3e1bb26ab5e" target="_blank">Read More</a>
+                </p>
+            </div>
+        </div>
+        <div class="blog-card alt">
+            <div class="meta">
+                <div class="photo"
+                    style="background-image: url('/static/colorme.jpeg')">
+                </div>
+                <ul class="details">
+                    <li class="author"><a href="#">Vishal Singh</a></li>
+                    <li class="date">Dec 15, 2021</li>
+                    <li class="tags">
+                        <ul>
+                            <li><a href="#">Deep Learning</a></li>
+                            <li><a href="#">Image Colorization</a></li>
+                            <li><a href="#">Docker</a></li>
+                            <li><a href="#">Flask</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="description">
+                <h1>Colorme : Black and white Image Colorization</h1>
+                <h2>Deep Learning | Flask | Docker</h2>
+                <p class="blog_text">Colorme is a end-to-end black and white image colorization project. In this task, the aim was to using pretrained base network for making image colorization model along with deployment via flask and docker. I also gained a flavour of converting regular tensorflow model to .tflite model and configuring the parameters for low latency and memoory usage.</p>
+                <p class="read-more">
+                    <a class="blog_text" href="https://medium.com/@vishal09vns/coloring-black-and-white-images-eebb65078ad8#09e3-fc8e6e2decff" target="_blank">Read More</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo"
+                    style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)">
+                </div>
+                <ul class="details">
+                    <li class="author"><a href="#">Jane Doe</a></li>
+                    <li class="date">July. 15, 2015</li>
+                    <li class="tags">
+                        <ul>
+                            <li><a href="#">Learn</a></li>
+                            <li><a href="#">Code</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="description">
+                <h1>Mastering the Language</h1>
+                <h2>Java is not the same as JavaScript</h2>
+                <p class="blog_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
+                    dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <p class="read-more">
+                    <a class="blog_text" href="#">Read More</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer starts here -->
+ <div class="social-container">
+    <ul class="social-icons">
+        <li><a href="https://www.linkedin.com/in/vishal-singh-398a4219b/"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/vishalsingha"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/vishal09vns/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://medium.com/@vishal09vns"><i class="fa fa-medium"></i></a></li>
+
+    </ul>
+  </div>
+<!-- footer ends here -->
+
+
+
+</body>
+
+
+<script src="/static/main.js"></script>
+
+</html>
+
+
