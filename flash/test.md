@@ -27,6 +27,25 @@ Here, $\ \text{softmax}(z_i)$  represents the probability assigned to the $\ i-t
 
 ### What is Safe-Softmax
 
+### Safe Softmax
+
+In practice, the softmax function may encounter numerical stability issues when dealing with large or small input values. Since `float16` can store only values up to `65536` (i.e. 2^16), so the e^x can overflow for x>11. Thus its very likely for the softmax function to overflow. 
+
+To address this, a common approach is to use the "safe-softmax" function, which is more numerically stable. The safe-softmax is defined as follows:
+
+$$
+
+m_k = max(z1, z2, ... , z_k) 
+$$
+
+$$
+
+\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}} = \frac{e^{z_i-m_k}}{\sum_{j=1}^{K} e^{z_j-m_ik}}
+$$
+
+
+
+
 
 
 
